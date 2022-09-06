@@ -84,11 +84,12 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 *Hᴇʟʟᴏ {} * [!]({})
 ───────────────────────
-× *I'ᴍ Aɴɪᴍᴇ-Tʜᴇᴍᴇ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ*
-× *I'ᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ Fᴇᴀᴛᴜʀᴇꜱ!*
+𝘅 𝗜'ᴍ 𝗧𝗲𝗹𝘂𝗴𝘂 𝗙𝗮𝗺 𝗚ʀᴏᴜᴘ 𝗠ᴀɴᴀɢᴇᴍᴇɴᴛ 𝗕ᴏᴛ
+× 𝗜'ᴍ 𝗩ᴇʀʏ 𝗙ᴀꜱᴛ 𝗔ɴᴅ 𝗠ᴏʀᴇ 𝗘ꜰꜰɪᴄɪᴇɴᴛ 𝗜 𝗣ʀᴏᴠɪᴅᴇ 𝗔ᴡᴇꜱᴏᴍᴇ 𝗙ᴇᴀᴛᴜʀᴇꜱ!
 ───────────────────────
-× *Uᴘᴛɪᴍᴇ:* `{}`
+× 𝗨ᴘᴛɪᴍᴇ `{}`
 × `{}` *Uꜱᴇʀ, Aᴄʀᴏꜱꜱ* `{}` *Cʜᴀᴛꜱ.*
+ 𝗣ᴏᴡᴇʀᴇᴅ 𝗕ʏ: 𝗧𝗲𝗹𝘂𝗴𝘂 𝗙𝗮𝗺 & 𝗧𝗺𝗮 𝗔𝗱𝗱𝗮!
 ───────────────────────"""
 
 buttons = [
@@ -235,11 +236,12 @@ def start(update: Update, context: CallbackContext):
           update.effective_message.reply_photo(
                 TIANA_IMG, caption="""*Hᴇʟʟᴏ {} !*
 ───────────────────
-× *I'ᴍ Aɴɪᴍᴇ-Tʜᴇᴍᴇ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ*
-× *I'ᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ Fᴇᴀᴛᴜʀᴇꜱ!*
+𝘅 𝗜'ᴍ 𝗧𝗲𝗹𝘂𝗴𝘂 𝗙𝗮𝗺 𝗚ʀᴏᴜᴘ 𝗠ᴀɴᴀɢᴇᴍᴇɴᴛ 𝗕ᴏᴛ
+× 𝗜'ᴍ 𝗩ᴇʀʏ 𝗙ᴀꜱᴛ 𝗔ɴᴅ 𝗠ᴏʀᴇ 𝗘ꜰꜰɪᴄɪᴇɴᴛ 𝗜 𝗣ʀᴏᴠɪᴅᴇ 𝗔ᴡᴇꜱᴏᴍᴇ 𝗙ᴇᴀᴛᴜʀᴇꜱ!
 ───────────────────
-× *Uᴘᴛɪᴍᴇ:* `{}`
+× *𝗨ᴘᴛɪᴍᴇ* `{}`
 × `{}` *Uꜱᴇʀ, Aᴄʀᴏꜱꜱ* `{}` *Cʜᴀᴛꜱ.*
+ 𝗣ᴏᴡᴇʀᴇᴅ 𝗕ʏ: 𝗧𝗲𝗹𝘂𝗴𝘂 𝗙𝗮𝗺 & 𝗧𝗺𝗮 𝗔𝗱𝗱𝗮!
 ───────────────────""".format(
                     escape_markdown(first_name),
                     escape_markdown(uptime),
@@ -247,8 +249,8 @@ def start(update: Update, context: CallbackContext):
                     sql.num_chats()),
                 reply_markup=InlineKeyboardMarkup(
                  [
-                  [InlineKeyboardButton(text="📄 Source", url="https://github.com/prince-botz/tianabot"), 
-                   InlineKeyboardButton(text="🫂 Support", url=f"https://t.me/{SUPPORT_CHAT}")]
+                  [InlineKeyboardButton(text="Channel", url="https://telegram.me/tmaadda"), 
+                   InlineKeyboardButton(text="🫂 Group", url=f"https://t.me/{SUPPORT_CHAT}")]
                  ]
               ),
                 parse_mode=ParseMode.MARKDOWN,              
@@ -414,7 +416,7 @@ Cʟɪᴄᴋ  Bᴇʟᴏᴡ  Bᴜᴛᴛᴏɴ  Tᴏ  Aᴅᴅ  Bᴏᴛ  Iɴ  Yᴏᴜ
 Bᴇғᴏʀᴇ  Wᴇ  Gᴏ,  I  Nᴇᴇᴅ  Aᴅᴍɪɴ  Pᴇʀᴍɪssɪᴏɴs  Iɴ  Tʜɪs  Cʜᴀᴛ  Tᴏ  Wᴏʀᴋ  Pʀᴏᴘᴇʀʟʏ.
 1). Cʟɪᴄᴋ  Mᴀɴᴀɢᴇ  Gʀᴏᴜᴘ.
 2). Gᴏ  Tᴏ  Aᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs  Aɴᴅ  Aᴅᴅ</b>  {BOT_USERNAME}  <b>As  Aᴅᴍɪɴ.
-3). Gɪᴠɪɴɢ  Fᴜʟʟ  Pᴇʀᴍɪssɪᴏɴs  Mᴀᴋᴇ  Tɪᴀɴᴀ  Fᴜʟʟʏ  Usᴇғᴜʟ</b>""",
+3). Gɪᴠɪɴɢ  Fᴜʟʟ  Pᴇʀᴍɪssɪᴏɴs  Mᴀᴋᴇ  тєℓυgυ ƒαм bot  Fᴜʟʟʏ  Usᴇғᴜʟ</b>""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
               [[InlineKeyboardButton(text="⬅️", callback_data="tiana_help"),
@@ -456,7 +458,7 @@ Rᴇғᴇʀ  Hᴇʟᴘ  Mᴇɴᴜ  Tᴏ  Sᴇᴇ  Eᴠᴇʀʏᴛʜɪɴɢ  Iɴ  D
 
 × Aɪ  CʜᴀᴛBᴏᴛ
 ᴡᴀɴᴛ  sᴏᴍᴇᴏɴᴇ  ᴛᴏ  ᴄʜᴀᴛ  ɪɴ  ɢʀᴏᴜᴘ?
-Tɪᴀɴᴀ  ʜᴀs  ᴀɴ  ɪɴᴛᴇʟʟɪɢᴇɴᴛ  ᴄʜᴀᴛʙᴏᴛ  ᴡɪᴛʜ  ᴍᴜʟᴛɪʟᴀɴɢ  sᴜᴘᴘᴏʀᴛ
+тєℓυgυ ƒαм  ʜᴀs  ᴀɴ  ɪɴᴛᴇʟʟɪɢᴇɴᴛ  ᴄʜᴀᴛʙᴏᴛ  ᴡɪᴛʜ  ᴍᴜʟᴛɪʟᴀɴɢ  sᴜᴘᴘᴏʀᴛ
 ʟᴇᴛ's  ᴛʀʏ  ɪᴛ,
 Sᴇɴᴅ  /chatbot  Oɴ  Aɴᴅ  Rᴇᴘʟʏ  Tᴏ  Aɴʏ  Oғ  Mʏ  Mᴇssᴀɢᴇs  Tᴏ  Sᴇᴇ  Tʜᴇ  Mᴀɢɪᴄ*""",
             parse_mode=ParseMode.MARKDOWN,
@@ -556,7 +558,7 @@ Aɢᴀɪɴ  Tʜᴀɴᴋs  Fᴏʀ  Usɪɴɢ  Mᴇ
         query.message.edit_text(
             text="""✗*Here is the help for Play Commands*:
 
-*Note*: Tiana Music Bot works on a single merged commands for Music and Video
+*Note*: тєℓυgυ ƒαм Music Bot works on a single merged commands for Music and Video
 
 ✗ *Youtube and Telegram Files*:
 
@@ -724,8 +726,8 @@ Support
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="📄 𝙎𝙤𝙪𝙧𝙘𝙚", url="github.com/Prince-Botz/Tianabot"),                 
-                    InlineKeyboardButton(text="🔙 𝘽𝙖𝙘𝙠", callback_data="about_"),
+                    InlineKeyboardButton(text="📄 Channel", url="telegram.me/tmaadda"),                 
+                    InlineKeyboardButton(text="🔙 Back", callback_data="about_"),
                  ]    
                 ]
             ),
