@@ -114,6 +114,7 @@ def warn(
             f"<b>User:</b> {mention_html(user.id, user.first_name)}\n"
             f"<b>Reason:</b> {reason}\n"
             f"<b>Counts:</b> <code>{num_warns}/{limit}</code>"
+            f"<b>Jagrathaga undali amma rei, lekunte potav (Group nunchi)</b>"
         )
 
     else:
@@ -142,6 +143,7 @@ def warn(
             f"<b>User:</b> {mention_html(user.id, user.first_name)}\n"
             f"<b>Reason:</b> {reason}\n"
             f"<b>Counts:</b> <code>{num_warns}/{limit}</code>"
+            f"<b>Jagrathaga undali amma rei, lekunte potav (Group nunchi)</b>"
         )
 
     try:
