@@ -50,7 +50,7 @@ def promote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("You don't have the necessary rights to do that!")
+        message.reply_text("pakkellu ika!")
         return
 
     user_id = extract_user(message, args)
@@ -67,7 +67,7 @@ def promote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status == "administrator" or user_member.status == "creator":
-        message.reply_text("How am I meant to promote someone that's already an admin?")
+        message.reply_text("Already vallu admin ey mowa😐")
         return
 
     if user_id == bot.id:
@@ -92,7 +92,7 @@ def promote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("I can't promote someone who isn't in the group.")
+            message.reply_text("group lo leni vallani ela admin chestav bidda.")
         else:
             message.reply_text("An error occured while promoting.")
         return
@@ -140,7 +140,7 @@ def demote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status == "creator":
-        message.reply_text("This person CREATED the chat, how would I demote them?")
+        message.reply_text("Owner ni ela demote chestav ra pulka")
         return
 
     if not user_member.status == "administrator":
@@ -148,7 +148,7 @@ def demote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_id == bot.id:
-        message.reply_text("I can't demote myself! Get an admin to do it for me.")
+        message.reply_text("ninnu nuv ela demote chestav,pakkeli aduko amma rei.")
         return
 
     try:
@@ -230,7 +230,7 @@ def set_title(update: Update, context: CallbackContext):
 
     if user_member.status != "administrator":
         message.reply_text(
-            "Can't set title for non-admins!\nPromote them first to set custom title!"
+            "non admins ki tittle ivvadam neram!"
         )
         return
 
@@ -273,7 +273,7 @@ def setchatpic(update, context):
     user = update.effective_user
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        msg.reply_text("You are missing right to change group info!")
+        msg.reply_text("mundu owner ni adigi change group info permission tisko vro 🙂!")
         return
 
     if msg.reply_to_message:
@@ -332,7 +332,7 @@ def setchat_title(update, context):
     args = context.args
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        msg.reply_text("You don't have enough rights to change chat info!")
+        msg.reply_text("members ki change group info permission ledamma!")
         return
 
     title = " ".join(args)
