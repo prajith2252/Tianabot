@@ -92,7 +92,7 @@ def ban(update: Update, context: CallbackContext) -> str:
         silent = False
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
-        f"#{'S' if silent else ''}BANNED\n"
+        f"#{'S' if silent else ''}BAN ayipoyav dobbey ika \n"
         f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
         f"<b>User:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
     )
@@ -123,7 +123,7 @@ def ban(update: Update, context: CallbackContext) -> str:
             # Do not reply
             if silent:
                 return log
-            message.reply_text("Banned!", quote=False)
+            message.reply_text("Ban ayipoyav dobbey ika!", quote=False)
             return log
         else:
             LOGGER.warning(update)
@@ -211,7 +211,7 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
         if excp.message == "Reply message not found":
             # Do not reply
             message.reply_text(
-                f"Banned! User will be banned for {time_val}.", quote=False
+                f"Banned! Malla  {time_val}.ee time ki join ka", quote=False
             )
             return log
         else:
@@ -273,7 +273,7 @@ def punch(update: Update, context: CallbackContext) -> str:
         )
         log = (
             f"<b>{html.escape(chat.title)}:</b>\n"
-            f"#KICKED\n"
+            f"#Baitiko Po\n"
             f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
             f"<b>User:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
         )
@@ -339,7 +339,7 @@ def unban(update: Update, context: CallbackContext) -> str:
         return log_message
 
     chat.unban_member(user_id)
-    message.reply_text("Yep, this user can join!")
+    message.reply_text("unban chesa mowa!")
 
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
@@ -387,7 +387,7 @@ def selfunban(context: CallbackContext, update: Update) -> str:
         return
 
     chat.unban_member(user.id)
-    message.reply_text("Yep, I have unbanned you.")
+    message.reply_text("Unban chesa pandagoww 🤩🙂.")
 
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
